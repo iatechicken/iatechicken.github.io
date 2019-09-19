@@ -1,706 +1,618 @@
 [
   {
-    "tdate": "09/01/2019",
-    "pdate": "09/02/2019",
-    "description": "SEAMLSSTONKATSUMATSUN",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -20.6
-  },
-  {
-    "tdate": "09/01/2019",
-    "pdate": "09/02/2019",
-    "description": "DD/BR #343097",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -5.75
-  },
-  {
-    "tdate": "09/01/2019",
-    "pdate": "09/01/2019",
-    "description": "Payment Thank You-Mobile",
-    "category": "",
-    "type": "Payment",
-    "amount": 2722.62
-  },
-  {
-    "tdate": "08/31/2019",
-    "pdate": "09/01/2019",
-    "description": "UBER   *EATS",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -2
-  },
-  {
-    "tdate": "08/31/2019",
-    "pdate": "09/01/2019",
-    "description": "UBER   *EATS",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -25.01
-  },
-  {
-    "tdate": "08/29/2019",
-    "pdate": "09/01/2019",
-    "description": "ENTERPRISE TOLL",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -6.45
-  },
-  {
-    "tdate": "08/31/2019",
-    "pdate": "09/01/2019",
-    "description": "SEAMLSSPOTBELLYSANDWI",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -10.45
-  },
-  {
-    "tdate": "08/30/2019",
-    "pdate": "09/01/2019",
-    "description": "SEAMLSSLENASITALIANKI",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -19.69
-  },
-  {
-    "tdate": "08/29/2019",
-    "pdate": "08/30/2019",
-    "description": "SEAMLSSSTICKYSFINGERJ",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -19.04
-  },
-  {
-    "tdate": "08/28/2019",
-    "pdate": "08/29/2019",
-    "description": "UBER   *EATS",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -17.16
-  },
-  {
-    "tdate": "08/28/2019",
-    "pdate": "08/29/2019",
-    "description": "SEAMLSSLANLARB2NDAVE",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -17.24
-  },
-  {
-    "tdate": "08/28/2019",
-    "pdate": "08/28/2019",
-    "description": "SEAMLSSGARLICPIZZABAR",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -21
-  },
-  {
-    "tdate": "08/27/2019",
-    "pdate": "08/28/2019",
-    "description": "SEAMLSSDOSTOROSTAQUER",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -20.44
+    "Date": "9/2/19",
+    "Description": "SEAMLSSTONKATSUMATSUN",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -20.6
   },
   {
-    "tdate": "08/26/2019",
-    "pdate": "08/27/2019",
-    "description": "UBER   *TRIP",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -70.88
+    "Date": "9/2/19",
+    "Description": "DD/BR #343097",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -5.75
   },
   {
-    "tdate": "08/27/2019",
-    "pdate": "08/27/2019",
-    "description": "SEAMLSSGOFISHATURBANS",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -26.93
+    "Date": "9/1/19",
+    "Description": "Payment Thank You-Mobile",
+    "Category": "",
+    "Type": "Payment",
+    "Amount": 2722.62
   },
   {
-    "tdate": "08/25/2019",
-    "pdate": "08/26/2019",
-    "description": "PANERA BREAD #204185 P",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -5.73
+    "Date": "9/1/19",
+    "Description": "UBER   *EATS",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -2
   },
   {
-    "tdate": "08/25/2019",
-    "pdate": "08/26/2019",
-    "description": "PANERA BREAD #204185 P",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -37.1
+    "Date": "9/1/19",
+    "Description": "UBER   *EATS",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -25.01
   },
   {
-    "tdate": "08/25/2019",
-    "pdate": "08/26/2019",
-    "description": "WAWA 5136     00051367",
-    "category": "Gas",
-    "type": "Sale",
-    "amount": -15.56
+    "Date": "9/1/19",
+    "Description": "ENTERPRISE TOLL",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -6.45
   },
   {
-    "tdate": "08/25/2019",
-    "pdate": "08/26/2019",
-    "description": "ENTERPRISE RENT-A-CAR",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -153.97
+    "Date": "9/1/19",
+    "Description": "SEAMLSSPOTBELLYSANDWI",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -10.45
   },
   {
-    "tdate": "08/25/2019",
-    "pdate": "08/26/2019",
-    "description": "PANERA BREAD #204185 P",
-    "category": "Food & Drink",
-    "type": "Return",
-    "amount": 37.1
+    "Date": "9/1/19",
+    "Description": "SEAMLSSLENASITALIANKI",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -19.69
   },
   {
-    "tdate": "08/22/2019",
-    "pdate": "08/25/2019",
-    "description": "TAXI SVC BROOKLYN",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -70.92
+    "Date": "8/30/19",
+    "Description": "SEAMLSSSTICKYSFINGERJ",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -19.04
   },
   {
-    "tdate": "08/23/2019",
-    "pdate": "08/25/2019",
-    "description": "AV PS DUNKIN DONUTS",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -8.85
+    "Date": "8/29/19",
+    "Description": "UBER   *EATS",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -17.16
   },
   {
-    "tdate": "08/23/2019",
-    "pdate": "08/25/2019",
-    "description": "SC CIBO EXPRESS",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -17.76
+    "Date": "8/29/19",
+    "Description": "SEAMLSSLANLARB2NDAVE",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -17.24
   },
   {
-    "tdate": "08/23/2019",
-    "pdate": "08/25/2019",
-    "description": "QUIET FLIGHT - UNIVERSAL",
-    "category": "Shopping",
-    "type": "Sale",
-    "amount": -34.08
+    "Date": "8/28/19",
+    "Description": "SEAMLSSGARLICPIZZABAR",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -21
   },
   {
-    "tdate": "08/22/2019",
-    "pdate": "08/23/2019",
-    "description": "SEAMLSSLENASITALIANKI",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -19.69
+    "Date": "8/28/19",
+    "Description": "SEAMLSSDOSTOROSTAQUER",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -20.44
   },
   {
-    "tdate": "08/22/2019",
-    "pdate": "08/23/2019",
-    "description": "UBER   *EATS",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -22.15
+    "Date": "8/27/19",
+    "Description": "UBER   *TRIP",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -70.88
   },
   {
-    "tdate": "08/21/2019",
-    "pdate": "08/22/2019",
-    "description": "SEAMLSSLANLARB2NDAVE",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -19.42
+    "Date": "8/27/19",
+    "Description": "SEAMLSSGOFISHATURBANS",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -26.93
   },
   {
-    "tdate": "08/20/2019",
-    "pdate": "08/22/2019",
-    "description": "596 DELI",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -13.21
+    "Date": "8/26/19",
+    "Description": "PANERA BREAD #204185 P",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -5.73
   },
   {
-    "tdate": "08/19/2019",
-    "pdate": "08/20/2019",
-    "description": "YOON HAEUNDAE GALBI",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -82.62
+    "Date": "8/26/19",
+    "Description": "PANERA BREAD #204185 P",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -37.1
   },
   {
-    "tdate": "08/19/2019",
-    "pdate": "08/20/2019",
-    "description": "SEAMLSSMONTAGUSGUSTO",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -21.4
+    "Date": "8/26/19",
+    "Description": "WAWA 5136     00051367",
+    "Category": "Gas",
+    "Type": "Sale",
+    "Amount": -15.56
   },
   {
-    "tdate": "08/18/2019",
-    "pdate": "08/19/2019",
-    "description": "DOMINO'S 3687",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -22.22
+    "Date": "8/26/19",
+    "Description": "ENTERPRISE RENT-A-CAR",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -153.97
   },
   {
-    "tdate": "08/16/2019",
-    "pdate": "08/19/2019",
-    "description": "596 DELI",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -8.69
+    "Date": "8/26/19",
+    "Description": "PANERA BREAD #204185 P",
+    "Category": "Food & Drink",
+    "Type": "Return",
+    "Amount": 37.1
   },
   {
-    "tdate": "08/18/2019",
-    "pdate": "08/19/2019",
-    "description": "SEAMLSSHUNANMANOR",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -44.9
+    "Date": "8/25/19",
+    "Description": "TAXI SVC BROOKLYN",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -70.92
   },
   {
-    "tdate": "08/17/2019",
-    "pdate": "08/18/2019",
-    "description": "D AGOSTINO #25",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -14.97
+    "Date": "8/25/19",
+    "Description": "AV PS DUNKIN DONUTS",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -8.85
   },
   {
-    "tdate": "08/16/2019",
-    "pdate": "08/18/2019",
-    "description": "TAXI SVC LONG ISALND C",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -12.8
+    "Date": "8/25/19",
+    "Description": "SC CIBO EXPRESS",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -17.76
   },
   {
-    "tdate": "08/15/2019",
-    "pdate": "08/18/2019",
-    "description": "BLUESTONE LANE - HUDSON Y",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -8.71
+    "Date": "8/25/19",
+    "Description": "QUIET FLIGHT - UNIVERSAL",
+    "Category": "Shopping",
+    "Type": "Sale",
+    "Amount": -34.08
   },
   {
-    "tdate": "08/17/2019",
-    "pdate": "08/18/2019",
-    "description": "SEAMLSSRATATOUILLECHI",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -14.73
+    "Date": "8/23/19",
+    "Description": "SEAMLSSLENASITALIANKI",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -19.69
   },
   {
-    "tdate": "08/16/2019",
-    "pdate": "08/18/2019",
-    "description": "DD/BR #343097",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -2.38
+    "Date": "8/23/19",
+    "Description": "UBER   *EATS",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -22.15
   },
   {
-    "tdate": "08/15/2019",
-    "pdate": "08/18/2019",
-    "description": "BED BATH &amp; BEYOND #42",
-    "category": "Home",
-    "type": "Sale",
-    "amount": -38.08
+    "Date": "8/22/19",
+    "Description": "SEAMLSSLANLARB2NDAVE",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -19.42
   },
   {
-    "tdate": "08/17/2019",
-    "pdate": "08/18/2019",
-    "description": "UBER   *TRIP",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -53.22
+    "Date": "8/22/19",
+    "Description": "596 DELI",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -13.21
   },
   {
-    "tdate": "08/15/2019",
-    "pdate": "08/18/2019",
-    "description": "MTA*METROCARD MACHINE",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -22
+    "Date": "8/20/19",
+    "Description": "YOON HAEUNDAE GALBI",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -82.62
   },
   {
-    "tdate": "08/14/2019",
-    "pdate": "08/16/2019",
-    "description": "CURB NYC",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -11.8
+    "Date": "8/20/19",
+    "Description": "SEAMLSSMONTAGUSGUSTO",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -21.4
   },
   {
-    "tdate": "08/15/2019",
-    "pdate": "08/16/2019",
-    "description": "SQ *TAKUMI TACO CHELSEA M",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -12.75
+    "Date": "8/19/19",
+    "Description": "DOMINO'S 3687",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -22.22
   },
   {
-    "tdate": "08/15/2019",
-    "pdate": "08/16/2019",
-    "description": "MR APPLIANCE NYC",
-    "category": "Shopping",
-    "type": "Sale",
-    "amount": -375.05
+    "Date": "8/19/19",
+    "Description": "596 DELI",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -8.69
   },
   {
-    "tdate": "08/14/2019",
-    "pdate": "08/16/2019",
-    "description": "BLOOMINGDALES  NEW YORK",
-    "category": "Shopping",
-    "type": "Sale",
-    "amount": -11.98
+    "Date": "8/19/19",
+    "Description": "SEAMLSSHUNANMANOR",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -44.9
   },
   {
-    "tdate": "08/15/2019",
-    "pdate": "08/16/2019",
-    "description": "LINKEDIN-480*7216483",
-    "category": "Bills & Utilities",
-    "type": "Sale",
-    "amount": -32.65
+    "Date": "8/18/19",
+    "Description": "D AGOSTINO #25",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -14.97
   },
   {
-    "tdate": "08/14/2019",
-    "pdate": "08/16/2019",
-    "description": "ESSA BAGEL",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -10.29
+    "Date": "8/18/19",
+    "Description": "TAXI SVC LONG ISALND C",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -12.8
   },
   {
-    "tdate": "08/14/2019",
-    "pdate": "08/16/2019",
-    "description": "CONTAINERSTORELEXINGTN",
-    "category": "Shopping",
-    "type": "Sale",
-    "amount": -60.94
+    "Date": "8/18/19",
+    "Description": "BLUESTONE LANE - HUDSON Y",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -8.71
   },
   {
-    "tdate": "08/15/2019",
-    "pdate": "08/16/2019",
-    "description": "SQ *VERY FRESH NOODLES",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -14.1
+    "Date": "8/18/19",
+    "Description": "SEAMLSSRATATOUILLECHI",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -14.73
   },
   {
-    "tdate": "08/15/2019",
-    "pdate": "08/16/2019",
-    "description": "D AGOSTINO #25",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -32.48
+    "Date": "8/18/19",
+    "Description": "DD/BR #343097",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -2.38
   },
   {
-    "tdate": "08/14/2019",
-    "pdate": "08/15/2019",
-    "description": "TRAVEL INSURANCE POLICY",
-    "category": "Bills & Utilities",
-    "type": "Sale",
-    "amount": -23.63
+    "Date": "8/18/19",
+    "Description": "BED BATH &amp; BEYOND #42",
+    "Category": "Home",
+    "Type": "Sale",
+    "Amount": -38.08
   },
   {
-    "tdate": "08/13/2019",
-    "pdate": "08/15/2019",
-    "description": "SONS OF THUNDER",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -20.96
+    "Date": "8/18/19",
+    "Description": "UBER   *TRIP",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -53.22
   },
   {
-    "tdate": "08/13/2019",
-    "pdate": "08/15/2019",
-    "description": "JETBLUE     2792132531210",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -236.59
+    "Date": "8/18/19",
+    "Description": "MTA*METROCARD MACHINE",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -22
   },
   {
-    "tdate": "08/14/2019",
-    "pdate": "08/15/2019",
-    "description": "Amazon.com*MO6AV0F62",
-    "category": "Shopping",
-    "type": "Sale",
-    "amount": -43.52
+    "Date": "8/16/19",
+    "Description": "CURB NYC",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -11.8
   },
   {
-    "tdate": "08/13/2019",
-    "pdate": "08/14/2019",
-    "description": "DD/BR #343097",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -3.87
+    "Date": "8/16/19",
+    "Description": "SQ *TAKUMI TACO CHELSEA M",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -12.75
   },
   {
-    "tdate": "08/12/2019",
-    "pdate": "08/14/2019",
-    "description": "MTA*METROCARD MACHINE",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -22
+    "Date": "8/16/19",
+    "Description": "MR APPLIANCE NYC",
+    "Category": "Shopping",
+    "Type": "Sale",
+    "Amount": -375.05
   },
   {
-    "tdate": "08/12/2019",
-    "pdate": "08/14/2019",
-    "description": "TACO BELL 035896",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -7.07
+    "Date": "8/16/19",
+    "Description": "BLOOMINGDALES  NEW YORK",
+    "Category": "Shopping",
+    "Type": "Sale",
+    "Amount": -11.98
   },
   {
-    "tdate": "08/13/2019",
-    "pdate": "08/14/2019",
-    "description": "NYCTAXI3L60",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -9.3
+    "Date": "8/16/19",
+    "Description": "LINKEDIN-480*7216483",
+    "Category": "Bills & Utilities",
+    "Type": "Sale",
+    "Amount": -32.65
   },
   {
-    "tdate": "08/12/2019",
-    "pdate": "08/14/2019",
-    "description": "NYCTAXI8N73",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -14.8
+    "Date": "8/16/19",
+    "Description": "ESSA BAGEL",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -10.29
   },
   {
-    "tdate": "08/12/2019",
-    "pdate": "08/13/2019",
-    "description": "ENTERPRISE RENT-A-CAR",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -71.3
+    "Date": "8/16/19",
+    "Description": "CONTAINERSTORELEXINGTN",
+    "Category": "Shopping",
+    "Type": "Sale",
+    "Amount": -60.94
   },
   {
-    "tdate": "08/12/2019",
-    "pdate": "08/13/2019",
-    "description": "SEAMLSSTAMSANGTHAIKIT",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -32.66
+    "Date": "8/16/19",
+    "Description": "SQ *VERY FRESH NOODLES",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -14.1
   },
   {
-    "tdate": "08/12/2019",
-    "pdate": "08/13/2019",
-    "description": "TST* LE PAIN QUOTIDIEN -",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -4.31
+    "Date": "8/16/19",
+    "Description": "D AGOSTINO #25",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -32.48
   },
   {
-    "tdate": "08/11/2019",
-    "pdate": "08/12/2019",
-    "description": "D AGOSTINO #25",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -8.46
+    "Date": "8/15/19",
+    "Description": "TRAVEL INSURANCE POLICY",
+    "Category": "Bills & Utilities",
+    "Type": "Sale",
+    "Amount": -23.63
   },
   {
-    "tdate": "08/10/2019",
-    "pdate": "08/12/2019",
-    "description": "CURB NYC",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -15.3
+    "Date": "8/15/19",
+    "Description": "SONS OF THUNDER",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -20.96
   },
   {
-    "tdate": "08/11/2019",
-    "pdate": "08/12/2019",
-    "description": "Amazon.com*MA3CL17O1",
-    "category": "Shopping",
-    "type": "Sale",
-    "amount": -15.68
+    "Date": "8/15/19",
+    "Description": "JETBLUE     2792132531210",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -236.59
   },
   {
-    "tdate": "08/09/2019",
-    "pdate": "08/12/2019",
-    "description": "SMOKE CITY NYC",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -20
+    "Date": "8/15/19",
+    "Description": "Amazon.com*MO6AV0F62",
+    "Category": "Shopping",
+    "Type": "Sale",
+    "Amount": -43.52
   },
   {
-    "tdate": "08/11/2019",
-    "pdate": "08/12/2019",
-    "description": "DELECTICA",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -19.23
+    "Date": "8/14/19",
+    "Description": "DD/BR #343097",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -3.87
   },
   {
-    "tdate": "08/11/2019",
-    "pdate": "08/12/2019",
-    "description": "AMZN Mktp US*MA4AQ5B00",
-    "category": "Shopping",
-    "type": "Sale",
-    "amount": -74.3
+    "Date": "8/14/19",
+    "Description": "MTA*METROCARD MACHINE",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -22
   },
   {
-    "tdate": "08/11/2019",
-    "pdate": "08/12/2019",
-    "description": "www.headout.com",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -123.75
+    "Date": "8/14/19",
+    "Description": "TACO BELL 035896",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -7.07
   },
   {
-    "tdate": "08/11/2019",
-    "pdate": "08/12/2019",
-    "description": "WYZANT INC",
-    "category": "Education",
-    "type": "Sale",
-    "amount": -59.05
+    "Date": "8/14/19",
+    "Description": "NYCTAXI3L60",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -9.3
   },
   {
-    "tdate": "08/09/2019",
-    "pdate": "08/11/2019",
-    "description": "CVS/PHARMACY #07019",
-    "category": "Health & Wellness",
-    "type": "Sale",
-    "amount": -22
+    "Date": "8/14/19",
+    "Description": "NYCTAXI8N73",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -14.8
   },
   {
-    "tdate": "08/10/2019",
-    "pdate": "08/11/2019",
-    "description": "UBER   *TRIP",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -54.32
+    "Date": "8/13/19",
+    "Description": "ENTERPRISE RENT-A-CAR",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -71.3
   },
   {
-    "tdate": "08/09/2019",
-    "pdate": "08/11/2019",
-    "description": "D AGOSTINO #25",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -24.75
+    "Date": "8/13/19",
+    "Description": "SEAMLSSTAMSANGTHAIKIT",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -32.66
   },
   {
-    "tdate": "08/07/2019",
-    "pdate": "08/09/2019",
-    "description": "596 DELI",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -6.51
+    "Date": "8/13/19",
+    "Description": "TST* LE PAIN QUOTIDIEN -",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -4.31
   },
   {
-    "tdate": "08/08/2019",
-    "pdate": "08/09/2019",
-    "description": "SEAMLSSMONTAGUSGUSTO",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -19.45
+    "Date": "8/12/19",
+    "Description": "D AGOSTINO #25",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -8.46
   },
   {
-    "tdate": "08/08/2019",
-    "pdate": "08/09/2019",
-    "description": "CVS/PHARMACY #07019",
-    "category": "Health & Wellness",
-    "type": "Sale",
-    "amount": -10.64
-  },
-  {
-    "tdate": "08/08/2019",
-    "pdate": "08/09/2019",
-    "description": "VERIZON*RECURRING PAY",
-    "category": "Bills & Utilities",
-    "type": "Sale",
-    "amount": -168.82
-  },
-  {
-    "tdate": "08/06/2019",
-    "pdate": "08/08/2019",
-    "description": "596 DELI",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -12.2
-  },
-  {
-    "tdate": "08/06/2019",
-    "pdate": "08/08/2019",
-    "description": "A AND H NEWSSTAND I CORP",
-    "category": "Shopping",
-    "type": "Sale",
-    "amount": -17
-  },
-  {
-    "tdate": "08/07/2019",
-    "pdate": "08/07/2019",
-    "description": "SEAMLSSRATATOUILLECHI",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -19.35
-  },
-  {
-    "tdate": "08/06/2019",
-    "pdate": "08/06/2019",
-    "description": "SEAMLSSLANLARB2NDAVE",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -17.24
-  },
-  {
-    "tdate": "08/05/2019",
-    "pdate": "08/06/2019",
-    "description": "APL*ITUNES.COM/BILL",
-    "category": "Shopping",
-    "type": "Sale",
-    "amount": -5.43
-  },
-  {
-    "tdate": "08/05/2019",
-    "pdate": "08/05/2019",
-    "description": "Payment Thank You - Web",
-    "category": "",
-    "type": "Payment",
-    "amount": 867.36
-  },
-  {
-    "tdate": "08/05/2019",
-    "pdate": "08/05/2019",
-    "description": "SEAMLSSPASTABYHUDSONA",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -18.85
-  },
-  {
-    "tdate": "08/03/2019",
-    "pdate": "08/05/2019",
-    "description": "596 DELI",
-    "category": "Groceries",
-    "type": "Sale",
-    "amount": -17.49
-  },
-  {
-    "tdate": "08/02/2019",
-    "pdate": "08/04/2019",
-    "description": "UBER   *TRIP",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -24.98
-  },
-  {
-    "tdate": "08/02/2019",
-    "pdate": "08/04/2019",
-    "description": "SEAMLSSMONTAGUSGUSTO",
-    "category": "Food & Drink",
-    "type": "Sale",
-    "amount": -19.45
-  },
-  {
-    "tdate": "08/01/2019",
-    "pdate": "08/04/2019",
-    "description": "JETBLUE     2792131658123",
-    "category": "Travel",
-    "type": "Sale",
-    "amount": -483.59
+    "Date": "8/12/19",
+    "Description": "CURB NYC",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -15.3
+  },
+  {
+    "Date": "8/12/19",
+    "Description": "Amazon.com*MA3CL17O1",
+    "Category": "Shopping",
+    "Type": "Sale",
+    "Amount": -15.68
+  },
+  {
+    "Date": "8/12/19",
+    "Description": "SMOKE CITY NYC",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -20
+  },
+  {
+    "Date": "8/12/19",
+    "Description": "DELECTICA",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -19.23
+  },
+  {
+    "Date": "8/12/19",
+    "Description": "AMZN Mktp US*MA4AQ5B00",
+    "Category": "Shopping",
+    "Type": "Sale",
+    "Amount": -74.3
+  },
+  {
+    "Date": "8/12/19",
+    "Description": "www.headout.com",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -123.75
+  },
+  {
+    "Date": "8/12/19",
+    "Description": "WYZANT INC",
+    "Category": "Education",
+    "Type": "Sale",
+    "Amount": -59.05
+  },
+  {
+    "Date": "8/11/19",
+    "Description": "CVS/PHARMACY #07019",
+    "Category": "Health & Wellness",
+    "Type": "Sale",
+    "Amount": -22
+  },
+  {
+    "Date": "8/11/19",
+    "Description": "UBER   *TRIP",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -54.32
+  },
+  {
+    "Date": "8/11/19",
+    "Description": "D AGOSTINO #25",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -24.75
+  },
+  {
+    "Date": "8/9/19",
+    "Description": "596 DELI",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -6.51
+  },
+  {
+    "Date": "8/9/19",
+    "Description": "SEAMLSSMONTAGUSGUSTO",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -19.45
+  },
+  {
+    "Date": "8/9/19",
+    "Description": "CVS/PHARMACY #07019",
+    "Category": "Health & Wellness",
+    "Type": "Sale",
+    "Amount": -10.64
+  },
+  {
+    "Date": "8/9/19",
+    "Description": "VERIZON*RECURRING PAY",
+    "Category": "Bills & Utilities",
+    "Type": "Sale",
+    "Amount": -168.82
+  },
+  {
+    "Date": "8/8/19",
+    "Description": "596 DELI",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -12.2
+  },
+  {
+    "Date": "8/8/19",
+    "Description": "A AND H NEWSSTAND I CORP",
+    "Category": "Shopping",
+    "Type": "Sale",
+    "Amount": -17
+  },
+  {
+    "Date": "8/7/19",
+    "Description": "SEAMLSSRATATOUILLECHI",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -19.35
+  },
+  {
+    "Date": "8/6/19",
+    "Description": "SEAMLSSLANLARB2NDAVE",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -17.24
+  },
+  {
+    "Date": "8/6/19",
+    "Description": "APL*ITUNES.COM/BILL",
+    "Category": "Shopping",
+    "Type": "Sale",
+    "Amount": -5.43
+  },
+  {
+    "Date": "8/5/19",
+    "Description": "Payment Thank You - Web",
+    "Category": "",
+    "Type": "Payment",
+    "Amount": 867.36
+  },
+  {
+    "Date": "8/5/19",
+    "Description": "SEAMLSSPASTABYHUDSONA",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -18.85
+  },
+  {
+    "Date": "8/5/19",
+    "Description": "596 DELI",
+    "Category": "Groceries",
+    "Type": "Sale",
+    "Amount": -17.49
+  },
+  {
+    "Date": "8/4/19",
+    "Description": "UBER   *TRIP",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -24.98
+  },
+  {
+    "Date": "8/4/19",
+    "Description": "SEAMLSSMONTAGUSGUSTO",
+    "Category": "Food & Drink",
+    "Type": "Sale",
+    "Amount": -19.45
+  },
+  {
+    "Date": "8/4/19",
+    "Description": "JETBLUE     2792131658123",
+    "Category": "Travel",
+    "Type": "Sale",
+    "Amount": -483.59
   }
 ]

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Richard Ryu - Data Product Manager</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Richard Ryu</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="work.html">Work</a></li>
+                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="ucbmids.html">UCB MIDS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('assets/img/github-actions.png')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>GitHub Actions: How we automatically deploy to AWS Lightsail/EC2 Instance</h1>
+                            <h2 class="subheading">Continuous Deployment, DevOps, Github Actions, AWS Lightsail, AWS EC2, Bash, Linux Screen</h2>
+                            <span class="meta">
+                                Posted by
+                                <a href="#!">Richard Ryu</a>
+                                on April, 2022
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <h2 class="section-heading">Background & Highlights</h2>
+                        <ul>
+                          <li>As a part time project, I've been helping out my friends build an online community for automobile owners on <a href="https://momo.town">momo</a></li>
+                          <li>The website was hosted and deployed via AWS Lightsail services and codebase was maintained in GitHub</li>
+                          <li>Whenever the dev team wanted to update and deploy the latest code changes for the website, the dev team had to manually run a deployment script after ssh-ing into the Lightsail instance</li>
+                          <li>Above process was cumbersome and the team wanted to automate the deployment process</li>
+                          <li>In order to solve the team's pain point and provide some form of continuous deployment, I looked into Github Actions</li>
+                          <li>Rather than create a brand new Github Actions yaml workflow file, I took advantage of existing workflows in the Github Actions Marketplace and ended up choosing <a href="https://github.com/appleboy/ssh-action">appleboy's ssh for github actions</a></li>
+                          <li>Despite some documentation and tutorials being available on the web, succesful execution of workflow was hard to achieve due to constant errors about private key format</li>
+                          <li>After digging through the issues log of Appleboy's ssh for github actions, I discovered that we had to use Ed25519 ssh-key instead of RSA keys</li>
+                        </ul>
+
+                        <h2 class="section-heading">Instructions</h2>
+                        <ol>
+                          <li>From your AWS Lightsail console, use browser-based ssh to access your Lightsail instance</li>
+                          <li>Enter <code>ssh-keygen -t ed25519 -C "your@email.com"</code> in order to generate a public key <code>id_ed25519.pub</code> and a private key<code>id_ed25519</code></li>
+                          <li>Enter <code>cat ~/.ssh/id_ed25519</code> in order to print the content of the key</li>
+                          <li>Go to Github Settings > Secrets > Actions and then click on "New repository secret" button</li>
+                          <li>Copy the content of the printed id_ed25519 key from the Lightsail instance and paste it into the "Value" field of New secret</li>
+                          <li>Go back to the Lightsail instance and enter <code>cat ~/.ssh/id_ed25519.pub</code> in order to print the content of the public key</li>
+                          <li>Copy the printed public key and then save it under your new authorized keys list by entering <code>nano ~/.ssh/authorized_keys2</code></li>
+                          <li>In order to provide sufficient privileges for your keys, enter <code>chmod 700 ~/.ssh</code></li>
+                          <li>In order to provide sufficient privileges for your authorized keys, enter <code>chmod 640 ~/.ssh/authorized_keys2</code></li>
+                          <li>Come back to GitHub and press the "Actions" tab</li>
+                          <li>Create a new workflow yaml file by clicking on "new workflow" > "set up a workflow yourself"</li>
+                          <li>Refer to <a href="">GitHub Actions Documentation</a> and the actual workflow file below that was used for our case</li>
+                        </ol>
+
+                        <pre class="line-numbers">
+                          <code class="language-yaml">
+
+name: 워크플로우 이름
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "SSH"
+  SSH2:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run deployment scripts on AWS Lightsail
+        uses: appleboy/ssh-action@master
+        with:
+            key: ${{ secrets.AWS_ED25519 }}
+            host: ${{ secrets.HOSTNAME_PROD_PUB }}
+            username: ${{ secrets.USER_NAME}}
+            script: |
+              whoami
+              "enter script"
+                            </code>
+                          </pre>
+                          <p></p>
+                      <ul>
+                        <li>For <code>host: ${{ secrets.HOSTNAME_PROD_PUB }}</code>, enter/save the public IP of your Lightsail instance in your repository's GitHub Secrets</li>
+                        <li>For <code>username: ${{ secrets.USER_NAME }}</code> enter/save the username of the Lightsail instance. </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Richard Ryu 2022</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

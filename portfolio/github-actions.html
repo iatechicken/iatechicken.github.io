@@ -26,8 +26,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="work.html">Work</a></li>
-                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="ucbmids.html">UCB MIDS</a></li>
+                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../work.html">Work</a></li>
+                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../ucbmids.html">UCB MIDS</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +38,8 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="post-heading">
-                            <h1>GitHub Actions: How we automatically deploy to AWS Lightsail/EC2 Instance</h1>
+                            <h1>GitHub Actions</h1>
+                            <h2 class="subheading">How we automatically deploy to AWS Lightsail/EC2 Instance</h2>
                             <h2 class="subheading">Continuous Deployment, DevOps, Github Actions, AWS Lightsail, AWS EC2, Bash, Linux Screen</h2>
                             <span class="meta">
                                 Posted by
@@ -70,13 +71,16 @@
                         <h2 class="section-heading">Instructions</h2>
                         <ol>
                           <li>From your AWS Lightsail console, use browser-based ssh to access your Lightsail instance</li>
-                          <li>Enter <code>ssh-keygen -t ed25519 -C "your@email.com"</code> in order to generate a public key <code>id_ed25519.pub</code> and a private key<code>id_ed25519</code></li>
+                          <li>Enter <code>ssh-keygen -t ed25519 -C "your@email.com"</code> in order to generate a public key <code>id_ed25519.pub</code> and a private key <code>id_ed25519</code></li>
                           <li>Enter <code>cat ~/.ssh/id_ed25519</code> in order to print the content of the key</li>
                           <li>Go to Github Settings > Secrets > Actions and then click on "New repository secret" button</li>
                           <li>Copy the content of the printed id_ed25519 key from the Lightsail instance and paste it into the "Value" field of New secret</li>
-                          <li>Go back to the Lightsail instance and enter <code>cat ~/.ssh/id_ed25519.pub</code> in order to print the content of the public key</li>
+                          <li>Go back to the Lightsail instance and enter
+                            <code>cat ~/.ssh/id_ed25519.pub</code>
+                            in order to print the content of the public key</li>
                           <li>Copy the printed public key and then save it under your new authorized keys list by entering <code>nano ~/.ssh/authorized_keys2</code></li>
-                          <li>In order to provide sufficient privileges for your keys, enter <code>chmod 700 ~/.ssh</code></li>
+                          <li>In order to provide sufficient privileges for your keys, enter
+                            <code>chmod 700 ~/.ssh</code></li>
                           <li>In order to provide sufficient privileges for your authorized keys, enter <code>chmod 640 ~/.ssh/authorized_keys2</code></li>
                           <li>Come back to GitHub and press the "Actions" tab</li>
                           <li>Create a new workflow yaml file by clicking on "new workflow" > "set up a workflow yourself"</li>
@@ -84,9 +88,9 @@
                         </ol>
 
                         <pre class="line-numbers">
-                          <code class="language-yaml">
+                          <code class="yaml">
 
-name: 워크플로우 이름
+name: Workflow Name
 
 # Controls when the workflow will run
 on:
@@ -100,7 +104,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "SSH"
-  SSH2:
+  SSH:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 

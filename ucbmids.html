@@ -268,15 +268,15 @@
                           </ul>
                         <pre>
                           <code class="python">
-                            # You will need an active googlemaps API code
-                            # david = pd.DataFrame(columns=['new_lat', 'new_long'])
+# You will need an active googlemaps API code
+# david = pd.DataFrame(columns=['new_lat', 'new_long'])
 
-                            import googlemaps
-                            gmaps = googlemaps.Client(key = 'your API key')
+import googlemaps
+gmaps = googlemaps.Client(key = 'your API key')
 
-                            for i in list(range(len(david))):
-                            temp_result = gmaps.reverse_geocode((david.loc[i,'new_lat'], david.loc[i, 'new_long']), result_type = "postal_code")
-                            david.loc[i, 'zipcode'] = temp_result[0].get('address_components')[0].get('long_name')
+for i in list(range(len(david))):
+temp_result = gmaps.reverse_geocode((david.loc[i,'new_lat'], david.loc[i, 'new_long']), result_type = "postal_code")
+david.loc[i, 'zipcode'] = temp_result[0].get('address_components')[0].get('long_name')
                             </code>
                           </pre>
                         <ul>

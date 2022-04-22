@@ -11263,6 +11263,7 @@ pre code {
   background-color: #eee;
   border: 1px solid #999;
   display: block;
+  max-width: 100%;
   padding: 20px;
 }
 

@@ -11258,3 +11258,31 @@ header.masthead .site-heading .h1 {
   margin-right: auto;
   margin-left: auto;
 }
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
+
+/* pre {
+  counter-reset: line 0;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-auto-rows: 1em;
+  gap: 0.3em;
+}
+
+.line-number {
+  text-align: right;
+}
+
+.line-number::before {
+  counter-increment: line;
+  content: counter(line);
+  white-space: pre;
+  color: #888;
+  padding: 0 .5em;
+  border-right: 1px solid #ddd;
+} */

@@ -58,7 +58,6 @@
                       <h2 class="section-heading">Background & Highlights</h2>
                       <ul>
                         <li>Weather data was frequently used at DeepLabs but was not properly managed</li>
-                        <li></li>
                         <li>Providing standardized weather data was expensive and challenging</li>
                         <li>We saved $</li>
                       </ul>
@@ -68,7 +67,18 @@
                         <p>This was problematic and we wanted to provide efficiency for the data scientists by setting up data pipelines to regularly provide quality weather data in an easily accessible location so that data scientists can better focus on solving business problems.</p>
                         <p>Sounds simple right? However, obtaining weather data was not as easy as we thought. First, the scope of collecting weather data was not defined. We wanted US weather data, but at which granularity? At the city level? State level? County level? Zip code level? Second, what type of measurements do we want? There are hundreds of weather metrics available like windspeed, visibility, uv index, humidity, temp, etc. Last, what about the frequency? Do we need it at the hourly level or daily level? If hourly, do we need ingest the weather data every hour or can we ingest it on a daily basis? What about weekly? From the user perspective, it is natural to say “I want everything available for me right here right now!” But the reality is that we have a business to run and don’t want to break the bank. Unlike airlines or logistics business that might actually need the latest weather data on a minute basis, we were in the fraud detection space where daily or weekly ingestion of data might suffice. The key here is finding the right balance and achieving efficiency.
                         </p>
-                        <p></p>
+                        <p>After few meetings with the data scientists, we were able to clarify some key requirements:</p>
+                        <ul>
+                          <li>US Hourly weather data for key metrics like temp, wind speed, uv index, sunrise/sunset time, etc.</li>
+                          <li>Ingestion at the US city & county level that is determined by FIPS (Federal Information Processing System)</li>
+                          <li>Weekly ingestion frequency</li>
+                          <li>Backfill ~5 years worth of weather data if possible</li>
+                        </ul>
+                        <p>With these requirements, we proceeded to find the ideal source and method to setup data ingestion pipeline. However, we ran into some issues quickly and realized that ingesting weather data for all US cities at the hourly level can be an expensive task both financially and systematically. To provide some perspective, there are ~20,000 US cities and to ingest weather data for all the US cities every hour meant ~ 480k API calls on a daily basis. If we were to naively assume that each API call costs $0.001, this meant ~$480 on a daily basis… yikes.</p>
+                        <p>Rather than despair, the data team saw this as an opportunity to provide value. Our first step was to seek various weather data vendors like openweather, darksky, tomorrow.io, etc. for the best deal that satisfies our requirements. Upon our initial research we were able to learn that we could leverage darksky's (now acquired by Apple and discontinuing at the end of 2022) weather data API to ingest hourly weather data on a daily basis. This meant that a single API call each day for a US city will contain 24 hours worth of hourly weather data in a nested JSON response. To simplify this in plain English, as long as we don’t need an updated hourly weather data on a real time basis, we can make a single API call to get 24 hours of hourly weather data instead of making 24 API calls for the same day. Our estimated daily cost went down from ~$480 to ~$20. Big difference in terms of price, but we also realized that there were room for improvement as we thought further about how weather data was collected by the vendors.
+                        </p>
+                        <p>We’re so accustomed to looking up weather by our location that we fail to realize that not all cities have active weather stations collecting and measuring data. Upon further research of NOAA (National Oceanic and Atmospheric Administration), we discovered that weather data is measured and collected from ISD (Integrated Surface Database) stations across the world. Also, the city sizes in United States are not uniform. There will be big cities while some cities will be very small in terms of sqft. For example, there could be two small cities that are so close to each other that the two cities will likely have highly similar weather metrics and measurements. For cases like these, it’s inefficient to make separate API calls as long as there aren’t major difference between the two separate API calls.</p>
+                        <p>"More to come.... WIP"</p>
                     </div>
                 </div>
             </div>

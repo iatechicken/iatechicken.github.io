@@ -86,7 +86,7 @@
                           <li>Filter out inactive stations with <code>WBAN = 99999</code></li>
                         </ol>
 
-                        <img src="assets/img/isdstation.png" alt="US ISD Stations" class="img-fluid">
+                        <img src="../assets/img/isdstation.png" alt="US ISD Stations" class="img-fluid">
                         <p>With the filters applied, we were able to narrow down the list of ISD stations to 2,232 active US stations! Considering that there are ~20,000 cities in the United States, the number of active ISD stations was less than what we expected. Given this information, we were curious to see whether the weather information gathered from the 2,232 active US ISD stations was sufficient to cover the weather information gathered directly from ~20,000 cities. Since we had the lat/long coordinates for both cities and active US ISD stations, we were able to use the DarkSky API to collect hourly weather data for both geographical level at the same time period. In order to make this experiment possible, we had to map each US city to the nearest active US ISD station and obtain the weather data for both city level and US ISD station level on the same time range. There are ~20,000 US cities and mapping each city to the closest US ISD station manually was going to be a pain. In order to automate the process, we looped through each US cities and mapped the closest US ISD stations by applying <a href =“https://en.wikipedia.org/wiki/Haversine_formula”>haversine formula</a> to find the closest US ISD stations. Now that the stations are mapped, we collaborated with the DS team to measure the difference in weather metrics between the API calls from US cities and ISD station mapped US cities. Despite some outliers around Rocky Mountain region and Midwest region (where there weren’t that many US ISD stations), we were able to verify ~97% similarity and concluded that weather metrics collected from US ISD stations and mapped to US cities were sufficient for our use case.
                         </p>
                         <p>In conclusion, we were able to save a lot of money for collecting hourly US weather data at the active US ISD station level. Below are some highlights:</p>
@@ -97,8 +97,7 @@
                           <li>Lowered our original estimated backfill cost of 5 years worth of weather data</li>
                             <ul>
                               <li>from <code>$480 * 365 days * 5 years = $876,000</code></li>
-                              <li>to</li>
-                              <li><code>$2.232 * 365 days * 5 years = $4,073.40</code></li>
+                              <li>to <code>$2.232 * 365 days * 5 years = $4,073.40</code></li>
                             </ul>
                         </ul>
 

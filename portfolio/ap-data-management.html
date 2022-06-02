@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Richard Ryu - Data Product Manager</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../index.html">Richard Ryu</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../work.html">Work</a></li>
+                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../ucbmids.html">UCB MIDS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('../assets/img/post-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>Improving the Strategic Planner</h1>
+                            <h2 class="subheading">How we applied data informed approach to product development for the internal users</h2>
+                            <span class="meta">
+                                Posted by
+                                <a href="../index.html">Richard Ryu</a>
+                                on March, 2019
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                      <h2 class="section-heading">Background & Highlights</h2>
+                      <ul>
+                        <li>Strategic Planner was a popular customer facing data visualization product</li>
+                        <li>Internal Users provided feedback that the manual deployment of the Strategic Planner via excel and SQL was slow and confusing</li>
+                        <li>But there were some internal users who were close to self-sufficient</li>
+                        <li>After carefully reviewing data along with user interviews, we discovered the high learning curve for the deployment of the Strategic Planner for the first time users</li>
+                        <li>We launched a self-service data management tool to address the feedback and automated a lot of the manual process for the deployment</li>
+                        <li>Deployment time and internal user satisfaction increased</li>
+                      </ul>
+                      <h2 class="section-heading">Situation</h2>
+                        <p>At Analytic Partners, one of our main customer facing products was the Strategic Planner, which allowed enterprise customers (marketing teams of Fortune 500 companies) to simulate their quarterly marketing budget spending. To be more specific, it was an interactive UI dashboard that allowed users to re-allocate their marketing budget % by different channels (tv, online, print, etc.) in order to simulate and observe the changes to their predicted sales and ROI (return of investment) per channel. One of the feedback was that although the Strategic Planner was popular and fun to use by the enterprise customers, the internal users felt that the process of manually preparing the input data required to set up the Strategic planner was too long and confusing. This was a surprising feedback for the development team as we had dedicated technical resources to help out the internal users via JIRA Service Desk and documentations with demos readily available for the internal users.
+                        </p>
+                      <h2 class="section-heading">Behavior</h2>
+                        <p>The Strategic Planner was a very popular product to convert the main analytic service of Analytic Partners, called the MMM (marketing mix modeling) into actionable insights and was updated on a quarterly basis. Preparation of the input data for the Strategic Planner was a two step process where:</p>
+                        <ol>
+                          <li>Internal users manually format the output of MMM in excel</li>
+                          <li>Technical support creates a table and insert the input data via SQL</li>
+                        </ol>
+                        <p>The development team had a mixed response to the feedback since we assumed that the process was straightforward and there were some internal users who were very self-sufficient when it came to preparing the input data. To better understand the feedback, we decided to dig deeper with both qualitative and quantitative data points. In order to generate qualitative data points, we conducted a survey among the internal users (~ 20 teams) with 5 point likert scale to measure the difficulty, feasibility, satisfaction and a separate question to estimate the # of hours required to prepare the input data for the Strategic Planner.</p>
+                        <p>For the quantitative data points, we decided to look at our JIRA service desk tickets and measure:</p>
+                        <ul>
+                          <li>Average duration of support request per ticket (generated every quarter): start time - end time</li>
+                          <li># of excel attachments per ticket (indicative of errors and mistakes)</li>
+                          <li>Average response time of our dedicated technical resources based on SLA (service level agreement) timers</li>
+                        </ul>
+                        <p>After going through the analysis, we learned that both metrics were within our reasonable threshold as:</p>
+                        <ul>
+                          <li>We averaged ~ 4 (out of 5) for all responses in the qualitative measurement</li>
+                          <li>Around 6 work hours spent by the internal users</li>
+                          <li>Average duration of support request ticket: ~ 1 week</li>
+                          <li># of excel attachments per ticket: ~ 3 spreadsheets</li>
+                          <li>Average response time: ~ 2 hours</li>
+                        </ul>
+                        <p>Although there’s room for improvement, the development team was quite satisfied with the metrics and felt that there wasn’t an urgent need to prioritize the pain point reported by our internal users. However, something felt off and I decided to filter the metrics by the duration of contracts for the Strategic Planner by grouping contracts that have been live for less than 2 quarters as “new clients” and the rest as “on-going clients”. The numbers told a different story when this grouping was applied. In general, the metrics from the internal users who were supporting the “on-going clients” were satisfactory, but the problem was with the internal users supporting the “new clients”. Below were the metrics from the internal users who were supporting “new clients”:</p>
+                        <ul>
+                          <li>5 out of 20 projects were considered as “new clients”: 25%</li>
+                          <li>~2 (out of 5) for all responses in the qualitative measurement</li>
+                          <li>Around 15 work hours spent by the internal users</li>
+                          <li>Average duration of support request ticket: ~ 2.5 week</li>
+                          <li># of excel attachments per ticket: ~ 9 spreadsheets</li>
+                          <li>Average response time: ~ 3 hours</li>
+                        </ul>
+                        <p>It seemed that the learning curve of manually preparing the input data was high and despite having dedicated technical resources and documentations, the process required multiple back and forth between the support team and the internal users, especially during the initial phase of setting up the Strategic Planner. With this insight, there were multiple options to consider in order to address the pain point of our internal users:</p>
+                        <ol>
+                          <li>Provide better documentation</li>
+                          <li>Encourage the internal users to better communicate and share resources when it comes to setting up or updating the Strategic Planner</li>
+                          <li>Build a self-service data management tool to prepare the input data for the Strategic Planner</li>
+                        </ol>
+                        <p>Among the 3 options, we determined that option 1 wasn’t an ideal solution to solve the internal user’s pain points and option 2 wasn’t too feasible since we had 20 projects spread across the global office and proposing to share our internal users across APAC regions and North American regions was not ideal. Therefore, we decided to run with option 3 as it was the most scalable solution via automation. Within 2 sprints, the development team was able to launch a self-service data management tool within the Strategic Planner that automatically transformed and uploaded the input data CSV file.</p>
+                      <h2 class="section-heading">Impact</h2>
+                        <p>The story of how our development team launched a self-service data management tool for the Strategic Planner was a good learning experience as it required us to dive deeper on what seemed like a “business as usual” situation and better empathize with the internal users. If we were to just rely on high-level averages, we would not have been able to
+identify the root-cause of the internal user’s feedback. Personally, I felt that there were more data points to measure like the average experience of the internal users, day of the week when support tickets were registered, # of columns manually transformed by the internal users, better classification of on-going clients, and more. However, the insights gained from our initial analysis were significant and the development team was able to act on it. By launching the self-service data management tool for the Strategic Planner, we were able to improve the overall metrics for the internal users:</p>
+                        <ul>
+                          <li>~4.5 (out of 5) for all responses in the qualitative measurement</li>
+                          <li>Around 2 work hours spent by the internal users</li>
+                          <li>Average duration of support request ticket: ~ 3 days</li>
+                          <li># of excel attachments per ticket: ~ 0.5 spreadsheets</li>
+                          <ul>
+                            <li>Most internal users didn’t have to attach spreadsheets to support request tickets anymore</li>
+                          </ul>
+                          <li>Average response time: ~ 0.5 hours</li>
+                          <ul>
+                            <li>Dedicated technical resources were mostly responsible for bugs instead of being involved in the entire process</li>
+                          </ul>
+                        </ul>
+                        <p>The biggest improvements came from the internal users who were involved with “new clients”:</p>
+                        <ul>
+                          <li>~4 (out of 5) for all responses in the qualitative measurement</li>
+                          <li>Around 2 work hours spent by the internal users</li>
+                          <li>Average duration of support request ticket: less than 1 week</li>
+                          <li># of excel attachments per ticket: ~ 1 spreadsheets</li>
+                          <li>Average response time: ~ 1 hours</li>
+                        </ul>
+                        <p>These improvements may not have had a direct impact on the performance of Strategic Planner, but we would like to assume that the overall quality of our internal user’s service to the actual clients have improved with our new enhancement. The average duration of a support request ticket implies our deployment time of the Strategic Planner and watching it reduce from ~ 2.5 weeks to less than a week for the new clients was very meaningful. Above all, I was glad that we got to rely less on manual transformations via excel spreadsheets and make our internal users' lives easier :)</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                          <li class="list-inline-item">
+                              <a href="https://www.linkedin.com/in/richardryu/">
+                                  <span class="fa-stack fa-lg">
+                                      <i class="fas fa-circle fa-stack-2x"></i>
+                                      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                                  </span>
+                              </a>
+                          </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/iatechicken">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Richard Ryu 2022</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>

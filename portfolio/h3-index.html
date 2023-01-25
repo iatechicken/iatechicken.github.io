@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Richard Ryu - Data Product Manager</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <!-- highlight.js for code blocks-->
+        <!-- <link rel="styleseet" href="/path/to/styles/default.min.css">
+        <script src="/path/to/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> -->
+        <!-- syntaxhighlighter.js -->
+        <!-- <script type="text/javascript" src="syntaxhighlighter.js"></script> -->
+        <!-- Pyscript -->
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../index.html">Richard Ryu</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../work.html">Work</a></li>
+                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../ucbmids.html">UCB MIDS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('../assets/img/hexagon-earth.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>H3: Uber's Hexagonal Hierarchical Spatial Index</h1>
+                            <h2 class="subheading">Partitioning the world into hexagon cells</h2>
+                            <span class="meta">
+                                Posted by
+                                <a href="../index.html">Richard Ryu</a>
+                                on November, 2022
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                      <h2 class="section-heading">Background & Highlights</h2>
+                      <ul>
+                        <li>Address and geospatial data is hard to understand and vary in sizes</li>
+                        <li>Rather than relying on the state/county/city definition of local governments, we would like to organize geospatial information in a uniform manner</li>
+                        <li>Convert local address to latitude & longitude coordinates then convert the coordinates to a desired h3-index resolution</li>
+                      </ul>
+
+                      <h2 class="section-heading">Body</h2>
+                      <p>The state/county/city definition by urban planning officials of just about any country in the world is not uniform or standardized in terms of area and presents a high learning curve when it comes to geospatial analysis. For example, the square meter of the Korean postal code 06076 will differ from the area of the Korean postal code 05676. An area of Songpa-Gu (Korean county) will be different from the area of Gangnam-Gu (Korean county).</p>
+                      <p>Also, address data can be considered as a personally identifiable information (PII) depending on where you obtained it from. If we can transform and store the address data into an index of a grid format that is consistent in size, then the location data will be less sensitive in terms of PII and become more universal.</p>
+                      <p>Before we start, it is important to note that there are 16 different resolution or sizes of hexagon indexes and each finer resolution has cells with one seventh the area of the coarser resolution. Each hexagon will have unique indexes like "8e283082e71501f". For official documentation, please refer to the <a href =“https://h3geo.org/docs”>official documentation</a></p>
+
+                      <h2 class="section-heading">Process</h2>
+                      <ol>
+                        <li>Obtain the input address and convert it to lat/long coordinates</li>
+                        <li>Use <a href =“https://github.com/uber/h3-py”>h3-py</a> python package to transform lat/long coordinates into the desired h3-indexes</li>
+                        <li>Use various functions to return the center lat/long coordinates of h3-indexes or the index key of lower resolutions</li>
+                        </ol>
+
+                      <h2 class="section-heading">How</h2>
+
+                      <pre style = "overflow:auto;">
+                        <code class="Python">
+<!-- <py-script> -->
+# Make sure to use the version 4.x which is currently in beta as of Jan 2023
+!pip install 'h3==4.0.0b1'
+import h3
+import pandas as pd
+import numpy as np
+## step 1: pre-requisite (obtain a list of lat/long coordinates)
+# lat_lng = [['36.2132881923','127.2048766057'], ['36.2132581923','128.2048766057']...]
+addr_df = pd.DataFrame(lat_lng, columns = ['lat', 'long'])
+
+# drop empty lat/long coordinates from the addr_df
+addr_df['lat'].replace('', np.nan, inplace=True)
+addr_df.dropna(subset=['lat'], inplace=True)
+<!-- </py-script> -->
+</code>
+</pre>
+<pre style = "overflow:auto;">
+  <code class="Python">
+## step 2: transform lat/long coordinates to the desired h3-indexes
+# we'll be using h3.latlng_to_cell() function from the version 4.x
+# we'll obtain h3-index for 2 resolutions [13, 14]
+h3_res = [13, 14]
+def h3_13(row):
+     return h3.latlng_to_cell(float(row.lat), float(row.long), h3_res[0])
+def h3_14(row):
+     return h3.latlng_to_cell(float(row.lat), float(row.long), h3_res[1])
+
+# use .apply() in df to create h3-index for each lat/long
+addr_df['h3_13'] = addr_df.apply(h3_13, axis = 1)
+addr_df['h3_14'] = addr_df.apply(h3_14, axis = 1)
+                          </code></pre>
+                  <p>1 You should end up with a data frame similar to below:</p>
+                  <img src="../assets/img/isdstation.png" alt="US ISD Stations" class="img-fluid">
+
+                  <pre style = "overflow:auto;">
+                    <code class="Python">
+## step 3: Other h3 functions
+## obtain the centroid of the h3-index by using h3.cell_to_latlng()
+def h3_13_centroid(row):
+     return h3.cell_to_latlng(row.h3_13)
+def h3_14_centroid(row):
+     return h3.cell_to_latlng(row.h3_14)
+
+# use .apply() in df to create new column for centroids
+addr_df['centroid_13'] = addr_df.apply(h3_13_centroid, axis = 1)
+addr_df['centroid_14'] = addr_df.apply(h3_14_centroid, axis = 1)
+                      </code></pre>
+                      <p>2 You should end up with a data frame similar to below:</p>
+
+                      <img src="../assets/img/isdstation.png" alt="US ISD Stations" class="img-fluid">
+                      <pre style = "overflow:auto;"><code class="Python">
+# splitting the centroid columns
+addr_df[['h3_13_cent_lat', 'h3_13_cent_long']] = addr_df['centroid_13'].apply(pd.Series).astype(str)
+addr_df[['h3_14_cent_lat', 'h3_14_cent_long']] = addr_df['centroid_14'].apply(pd.Series).astype(str)
+addr_df.drop(['centroid_13'], axis = 1, inplace=True)
+addr_df.drop(['centroid_14'], axis = 1, inplace=True)
+</code></pre>
+<p>3 You should end up with a data frame similar to below:</p>
+
+<img src="../assets/img/isdstation.png" alt="US ISD Stations" class="img-fluid">
+<pre style = "overflow:auto;"><code class="Python">
+## obtain h3-index for higher resolution
+# use h3.cell_to_parent(h3-index, resolution) function
+def h3_9(x):
+     return h3.cell_to_parent(x.h3_14, 9)
+def h3_9(x):
+     return h3.cell_to_parent(x.h3_14, 9)
+def h3_9(x):
+     return h3.cell_to_parent(x.h3_14, 9)
+
+# apply the functions above to addr_df
+addr_df['h3_9'] = addr_df.apply(h3_9, axis = 1)
+addr_df['h3_8'] = addr_df.apply(h3_8, axis = 1)
+addr_df['h3_7'] = addr_df.apply(h3_7, axis = 1)
+  </code></pre>
+<p>4 You should end up with a data frame similar to below:</p>
+
+<img src="../assets/img/isdstation.png" alt="US ISD Stations" class="img-fluid">
+
+  <h2 class="section-heading">References</h2>
+  <ul>
+    <li><a href =“https://github.com/uber/h3-py”>h3-py github</a></li>
+    <li><a href =“https://h3geo.org/docs/”>h3 documentation</a></li>
+    <li><a href =“https://www.uber.com/en-KR/blog/h3/”>Uber h3 blog</a></li>
+    <li><a href =“https://wolf-h3-viewer.glitch.me/?h3=8a589c98475ffff”>h3 visualization</a></li>
+    </ul>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                          <li class="list-inline-item">
+                              <a href="https://www.linkedin.com/in/richardryu/">
+                                  <span class="fa-stack fa-lg">
+                                      <i class="fas fa-circle fa-stack-2x"></i>
+                                      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                                  </span>
+                              </a>
+                          </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/iatechicken">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; Richard Ryu 2022</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>
